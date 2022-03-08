@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/dark_gray">
+
+    <LinearLayout
+        android:id="@+id/ll_compare"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <ListView
+            android:id="@+id/lv_compare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fourHundred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="400nm"
+        android:textSize="10sp"
+        android:layout_below="@+id/sv_compare"/>
+    <TextView
+        android:id="@+id/fiveHundredAndFifty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="550nm"
+        android:textSize="10sp"
+        android:layout_below="@+id/sv_compare"
+        android:layout_marginLeft="113dp"
+        android:layout_toRightOf="@+id/fourHundred"/>
+    <TextView
+        android:id="@+id/sevenHundred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="700nm"
+        android:textSize="10sp"
+        android:layout_marginLeft="113dp"
+        android:layout_toRightOf="@id/fiveHundredAndFifty"
+        android:layout_below="@+id/sv_compare"/>
+    <SurfaceView
+        android:id="@+id/sv_compare"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:layout_below="@+id/ll_compare"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btn_compare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv_compare"
+        android:background="@drawable/main_button"
+        android:layout_marginTop="20dp"
+        android:text="分析"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btn_bright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv_compare"
+        android:layout_toRightOf="@+id/btn_compare"
+        android:background="@drawable/main_button"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:text="选亮光谱"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btn_trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv_compare"
+        android:layout_toRightOf="@+id/btn_bright"
+        android:background="@drawable/main_button"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:text="透射谱"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/aiLab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_trans"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ailab"/>
+
+</RelativeLayout>

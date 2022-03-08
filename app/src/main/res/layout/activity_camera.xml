@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="截取光谱"
+        android:gravity="center_horizontal"/>
+
+    <TextureView
+        android:id="@+id/texture_view_camera2"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/title"/>
+
+    <ImageView
+        android:id="@+id/image_view_preview_image"
+
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/texture_view_camera2"/>
+
+    <Button
+        android:id="@+id/btn_camera2_takePhoto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="拍照"
+        android:textSize="20sp"
+        android:background="@drawable/main_button"
+        android:layout_toRightOf="@+id/image_view_preview_image"
+        android:layout_below="@+id/texture_view_camera2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <Button
+        android:id="@+id/btn_camera2_savePhoto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="保存"
+        android:textSize="20sp"
+        android:background="@drawable/main_button"
+        android:layout_toRightOf="@+id/btn_camera2_takePhoto"
+        android:layout_below="@+id/texture_view_camera2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/LL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/image_view_preview_image"
+        android:layout_below="@+id/btn_camera2_takePhoto">
+
+        <Button
+            android:id="@+id/btn_minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/minus" />
+
+        <TextView
+            android:id="@+id/iso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:width="60dp"
+            android:gravity="center_horizontal"
+            android:text="50"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/plus" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_zoomIn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/plus"
+        android:layout_below="@+id/LL"
+        android:layout_toRightOf="@+id/image_view_preview_image"/>
+
+    <Button
+        android:id="@+id/btn_zoomOut"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/minus"
+        android:layout_below="@+id/LL"
+        android:layout_toRightOf="@+id/btn_zoomIn"/>
+
+
+</RelativeLayout>

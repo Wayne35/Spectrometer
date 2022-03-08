@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/passPic"
+        android:layout_width="180dp"
+        android:layout_height="278dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+
+    <widget.VerticalSeekBar
+        android:id="@+id/position"
+        android:layout_width="50dp"
+        android:layout_height="320dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/passPic" />
+
+    <TextView
+        android:id="@+id/current_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/position"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/RGB_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/position"
+        android:layout_below="@id/current_progress"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <SurfaceView
+        android:id="@+id/spectrum"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/position"/>
+
+    <Button
+        android:id="@+id/btn_return"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/spectrum"
+        android:text="返回"
+        android:textSize="40sp"
+        android:background="@drawable/main_button"/>
+
+    <Button
+        android:id="@+id/btn_spec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/spectrum"
+        android:layout_toRightOf="@+id/btn_return"
+        android:text="平滑分析"
+        android:textSize="40sp"
+        android:background="@drawable/main_button"/>
+
+</RelativeLayout>

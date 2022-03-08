@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/passPic"
+        android:layout_width="180dp"
+        android:layout_height="278dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <widget.VerticalSeekBar
+        android:id="@+id/position"
+        android:layout_width="50dp"
+        android:layout_height="320dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/passPic" />
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_toRightOf="@id/position"
+        android:paddingLeft="10dp"
+        android:paddingTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/current_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="高度:"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:minWidth="48dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/RGB_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/position"
+        android:layout_below="@id/ll_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <SurfaceView
+        android:id="@+id/spectrum"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:layout_below="@+id/position" />
+
+    <Button
+        android:id="@+id/btn_spec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/spectrum"
+        android:text="分析"
+        android:textSize="20sp"
+        android:background="@drawable/main_button"/>
+
+    <Button
+        android:id="@+id/btn_smooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/spectrum"
+        android:layout_toRightOf="@id/btn_spec"
+        android:text="平滑"
+        android:textSize="20sp"
+        android:background="@drawable/main_button"/>
+
+    <Button
+        android:id="@+id/btn_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/spectrum"
+        android:layout_toRightOf="@id/btn_smooth"
+        android:text="灰度"
+        android:textSize="20sp"
+        android:background="@drawable/main_button"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/spectrum"
+        android:layout_toRightOf="@id/btn_grey"
+        android:text="保存"
+        android:textSize="20sp"
+        android:background="@drawable/main_button"/>
+
+</RelativeLayout>

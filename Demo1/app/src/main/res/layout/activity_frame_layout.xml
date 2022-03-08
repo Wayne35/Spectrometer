@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/btn_plane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="飞机拖动"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:background="@drawable/main_button"/>
+    <Button
+        android:id="@+id/btn_move"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="女孩行走"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:background="@drawable/main_button"
+        android:layout_below="@+id/btn_plane"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
